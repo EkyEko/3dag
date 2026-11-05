@@ -14,8 +14,6 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _CAUSTICS_ON
-  - _CRESTGLOW_ON
-  - _FOAM_ON
   - _GERSTNERWAVE_ON
   - _NORMALPERTURB_ON
   - _PLANARREFLECTION_ON
