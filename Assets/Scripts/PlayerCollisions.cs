@@ -17,7 +17,7 @@ public class PlayerCollisions : MonoBehaviour
         private void OnControllerColliderHit(ControllerColliderHit hit)
     {
     // Check if the player hits an object with the Axe tag
-    if (hit.gameObject.CompareTag("Axe"))
+    if (hit.gameObject.CompareTag("Pickup"))
     {
     print("Hit the axe!");
     }

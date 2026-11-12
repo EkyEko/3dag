@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: be42e47b3464b25469d2b4373dd25208
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Pickup1Tex: {fileID: 21300000, guid: b33984f655cd86c47b5bf0bd1808c832, type: 3}
+  - Pickup2Tex: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
