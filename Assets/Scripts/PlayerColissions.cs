@@ -39,7 +39,7 @@ private new AudioSource audio;
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.gameObject.CompareTag("") && PickupCollect.pickupAmount < 4)
+        if(hit.gameObject.CompareTag("Pickup"))
         {
             PickupCollect.hud.enabled = true;
 
