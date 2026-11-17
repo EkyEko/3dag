@@ -37,5 +37,17 @@ private new AudioSource audio;
         }
     }
 
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.gameObject.CompareTag("") && PickupCollect.pickupAmount < 4)
+        {
+            PickupCollect.hud.enabled = true;
+
+            TextHints.message = "An axe is helpful in a forest...";
+
+            Texthints.TextOn = true;
+        }
+    }
+
 
 }
