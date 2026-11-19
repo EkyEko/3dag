@@ -37,17 +37,7 @@ private new AudioSource audio;
         }
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if(hit.gameObject.CompareTag("Pickup"))
-        {
-            PickupCollect.hud.enabled = true;
 
-            TextHints.message = "An axe is helpful in a forest...";
-
-            Texthints.TextOn = true;
-        }
-    }
 
 
 }
