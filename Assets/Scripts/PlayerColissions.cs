@@ -1,9 +1,11 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerColissions : MonoBehaviour
 {
 
 private new AudioSource audio;
+
 [SerializeField] private AudioClip pickupCollectSound;
 
 
@@ -25,13 +27,12 @@ private new AudioSource audio;
 //Collision detection
 
 
-    void OnControllerColliderHit(ControllerColliderHit coll)
+    void OnTriggerEnter(Collider coll)
     {
         if(coll.gameObject.CompareTag("Pickup"))
         {
             PickupCollect.pickupAmount++;
 
-           audio.PlayOneShot(pickupCollectSound);
 
            Destroy(coll.gameObject);
         }

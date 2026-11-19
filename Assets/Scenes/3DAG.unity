@@ -5140,6 +5140,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec2c3608dcad96b4ca2eb3efcd15803c, type: 3}
+--- !u!1 &1116621699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116621701}
+  - component: {fileID: 1116621700}
+  m_Layer: 0
+  m_Name: Post-Processing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1116621700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116621699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 0a84c894586b42f4f8d74c765dd743ff, type: 2}
+--- !u!4 &1116621701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116621699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 128.89322, y: 50.30952, z: -17.7099}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122425973 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4372043385601356926, guid: 948097c46b7b63e439261e925a602106, type: 3}
@@ -5251,7 +5300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6907365837840644099, guid: c4cadad71b6b6b447a40ea3e5d59ff6c, type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6907365837840644099, guid: c4cadad71b6b6b447a40ea3e5d59ff6c, type: 3}
       propertyPath: m_Enabled
@@ -5259,7 +5308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6907365837840644099, guid: c4cadad71b6b6b447a40ea3e5d59ff6c, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8180728183460104592, guid: c4cadad71b6b6b447a40ea3e5d59ff6c, type: 3}
       propertyPath: m_Name
@@ -7211,6 +7260,43 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec2c3608dcad96b4ca2eb3efcd15803c, type: 3}
+--- !u!84 &1524499497
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OptiWaterPlanarReflectionRT
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1001 &1527347720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7594,43 +7680,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4945915258126434362, guid: df31d0d4726e7954c9a5bdf35497688b, type: 3}
   m_PrefabInstance: {fileID: 854612766}
   m_PrefabAsset: {fileID: 0}
---- !u!84 &1626352391
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: OptiWaterPlanarReflectionRT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1 &1633772482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2670705143237255700, guid: 00c676671bc770449bd60c68f866feab, type: 3}
@@ -9169,8 +9218,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.006009936
-  far clip plane: 1201.9872
+  near clip plane: 0.005739488
+  far clip plane: 1147.8977
   field of view: 60.000004
   orthographic: 0
   orthographic size: 5
@@ -9179,7 +9228,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 1626352391}
+  m_TargetTexture: {fileID: 1524499497}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -9197,8 +9246,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808727480}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5327735, y: 0, z: -0.8427587, w: 0.07687777}
-  m_LocalPosition: {x: 133.59703, y: 39.233505, z: -16.50773}
+  m_LocalRotation: {x: 0.227246, y: 0, z: -0.9016268, w: 0.36800593}
+  m_LocalPosition: {x: 133.73166, y: 39.418373, z: -16.66839}
   m_LocalScale: {x: 0.099571794, y: 0.02912258, z: 0.10488522}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11043,3 +11092,4 @@ SceneRoots:
   - {fileID: 1331964541}
   - {fileID: 1290880027}
   - {fileID: 1377628748}
+  - {fileID: 1116621701}
