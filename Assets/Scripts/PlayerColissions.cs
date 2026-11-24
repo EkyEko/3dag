@@ -78,6 +78,15 @@ private void onControllerColliderHit(ControllerColliderHit hit)
 
            Destroy(coll.gameObject);
         }
+
+        if(coll.gameObject.CompareTag("Tree") && PickupCollect.pickupAmount == 1)
+        {
+            PickupCollect.pickupAmount++;
+
+            audio.PlayOneShot(pickupCollectSound);
+
+            Destroy(coll.gameObject);
+        }
     }
 
 
