@@ -4,9 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - AxeUI: {fileID: 8180728183460104592, guid: c4cadad71b6b6b447a40ea3e5d59ff6c, type: 3}
-  - TorchUI: {instanceID: 0}
-  - FlameUI: {instanceID: 0}
+  - Pickup1Tex: {fileID: 21300000, guid: b33984f655cd86c47b5bf0bd1808c832, type: 3}
+  - Pickup2Tex: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
