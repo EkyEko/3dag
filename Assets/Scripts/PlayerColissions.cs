@@ -46,15 +46,15 @@ private bool doorIsOpen = false;
         }
     }
 
-private void onControllerColliderHit(ControllerColliderHit hit)
+private void OnControllerColliderHit(ControllerColliderHit hit)
 {
-    if(hit.gameObject.CompareTag("Tree") && PickupCollect.pickupAmount >= 1)
+    if(hit.gameObject.CompareTag("Tree") && PickupCollect.AxeCollected == true)
     {
 
-        PickupCollect.hud.enabled = false;
+        PickupCollect.TorchCollected = true;
     }
 
-    else if (hit.gameObject.CompareTag("Tree") && PickupCollect.pickupAmount <= 0)
+    else if (hit.gameObject.CompareTag("Tree") && PickupCollect.AxeCollected == false)
     {
         TextHints.message = "Might need an axe for this...";
 
@@ -70,18 +70,18 @@ private void onControllerColliderHit(ControllerColliderHit hit)
 //Collision detection
     void OnTriggerEnter(Collider coll)
     {
-        if(coll.gameObject.CompareTag("Pickup"))
+        if(coll.gameObject.CompareTag("Axe"))
         {
-            PickupCollect.pickupAmount++;
+            PickupCollect.AxeCollected = true;
 
             audio.PlayOneShot(pickupCollectSound);
 
            Destroy(coll.gameObject);
         }
 
-        if(coll.gameObject.CompareTag("Tree") && PickupCollect.pickupAmount == 1)
+        if(coll.gameObject.CompareTag("Tree") && PickupCollect.AxeCollected == true)
         {
-            PickupCollect.pickupAmount++;
+            PickupCollect.TorchCollected = true;
 
             audio.PlayOneShot(pickupCollectSound);
 

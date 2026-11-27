@@ -3,36 +3,38 @@ using UnityEngine.UI;
 
 public class PickupCollect : MonoBehaviour
 {
-    public static int pickupAmount = 0;
+    public static bool AxeCollected = false;
+    public static bool TorchCollected = false;
+    public static bool FlameCollected = false;
 
-    public static Image hud;
 
-    [SerializeField] Sprite Pickup1Tex;
-    [SerializeField] Sprite Pickup2Tex;
-    
+    [SerializeField] GameObject AxeUI;
+    [SerializeField] GameObject TorchUI;
+    [SerializeField] GameObject FlameUI;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        hud = gameObject.GetComponentInChildren<Image>();
-
-        hud.enabled = false;
-
-        pickupAmount = 0;
+        AxeUI.SetActive(false);
+        TorchUI.SetActive(false);
+        FlameUI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(pickupAmount == 1)
+        if(AxeCollected == true)
         {
-            hud.sprite = Pickup1Tex;
-            hud.enabled = true;
+            AxeUI.SetActive(true);
         }
-        else if(pickupAmount == 2)
+        if(TorchCollected == true)
         {
-            hud.sprite = Pickup2Tex;
-            hud.enabled = true;
+            TorchUI.SetActive(true);
+        }
+        if(FlameCollected == true) 
+        {
+            FlameUI.SetActive(true);
         }
     }
 }
