@@ -9,6 +9,8 @@ public class PickupCollect : MonoBehaviour
 
     [SerializeField] Sprite Pickup1Tex;
     [SerializeField] Sprite Pickup2Tex;
+    [SerializeField] Sprite Pickup3Tex;
+    [SerializeField] GameObject Fire;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,6 +21,8 @@ public class PickupCollect : MonoBehaviour
         hud.enabled = false;
 
         pickupAmount = 0;
+
+        Fire.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,6 +37,17 @@ public class PickupCollect : MonoBehaviour
         {
             hud.sprite = Pickup2Tex;
             hud.enabled = true;
+        }
+        else if (pickupAmount == 3)
+        {
+            hud.sprite = Pickup3Tex;
+            hud.enabled = true;
+            Fire.SetActive(true);
+        }
+        else
+        {
+            hud.enabled = false;
+            Fire.SetActive(false);
         }
     }
 }

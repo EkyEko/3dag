@@ -67,7 +67,7 @@ private void onControllerColliderHit(ControllerColliderHit hit)
 
 
 
-//Collision detection
+//Item Obtainment
     void OnTriggerEnter(Collider coll)
     {
         if(coll.gameObject.CompareTag("Pickup"))
@@ -86,6 +86,25 @@ private void onControllerColliderHit(ControllerColliderHit hit)
             audio.PlayOneShot(pickupCollectSound);
 
             Destroy(coll.gameObject);
+        }
+        if(coll.gameObject.CompareTag("Fire") && PickupCollect.pickupAmount == 2)
+        {
+            PickupCollect.pickupAmount++;
+
+            audio.PlayOneShot(pickupCollectSound);
+
+            Destroy(coll.gameObject);
+
+
+        }
+        if(coll.gameObject.CompareTag("RitualFlame") && PickupCollect.pickupAmount == 3)
+        {
+            PickupCollect.pickupAmount++;
+
+            audio.PlayOneShot(pickupCollectSound);
+
+            Destroy(coll.gameObject);
+            coll.transform.parent.Find("Afterburner").gameObject.SetActive(true);
         }
     }
 
